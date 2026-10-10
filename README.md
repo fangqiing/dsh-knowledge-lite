@@ -15,14 +15,26 @@
 - **拖拽移动**：把笔记拖到任意目录节点即移动
 - **对话导出**：把 dsh 对话整理成笔记（writeback）
 
-## 安装（开发模式，针对 dsh 0.2.0-rc.2 / Windows）
+## 安装
 
-1. 退出 dsh（含后台进程），否则依赖安装会 EPERM
-2. 克隆本仓库到本地
-3. `pnpm install`（依赖用 `link:` 协议，改动即时生效，无需重装）
-4. 把插件链接进 dsh 的插件目录并重启 dsh
+上架 DSH 插件市场后，可在 dsh 的 `设置 → 插件市场` 搜索 `dsh-knowledge-lite` 一键安装。
+
+手动 / 开发模式（针对 dsh `0.2.0-rc.2` / Windows）：
+
+```bash
+git clone https://github.com/fangqiing/dsh-knowledge-lite.git
+cd dsh-knowledge-lite
+pnpm install          # 依赖用 link: 协议，改动即时生效，无需重装
+# 把插件链接进 dsh 的插件目录并重启 dsh（安装前需彻底退出 dsh，否则 EPERM）
+```
 
 > 宿主版本需与 `peerDependencies` 中的 `@deepseek-ai/dsh-*` `0.2.0-rc.2` 匹配。
+
+## 兼容性
+
+- **宿主**：DeepSeek Harness `0.2.0-rc.2`
+- **平台**：Windows（默认笔记根目录写死 `E:/dsh-kb`，其他平台需改 `lib/config.js` 的 `DEFAULT_ROOT`）
+- **分类建议**：知识管理 / 效率工具
 
 ## 目录结构
 
