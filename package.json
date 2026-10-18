@@ -1,6 +1,6 @@
 {
   "name": "dsh-knowledge-lite",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "本地知识库插件 for DeepSeek Harness (dsh)：每篇一个 Markdown 文件，支持全文搜索、标签、层级目录、附件与 Office 文本抽取。",
   "license": "MIT",
   "type": "module",
